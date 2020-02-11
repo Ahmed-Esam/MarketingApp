@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "MarketingApp": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MarketingApp"
+    }
+  },
+  "defaultProject": "MarketingApp",
+  "cli": {
+    "analytics": "7869b3b4-c1aa-44b0-a6be-147131467a3b"
+  }
 }
