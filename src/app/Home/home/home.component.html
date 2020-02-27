@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4" *ngFor="let photos of photo | slice:0:9">
+            <div class="thumbnail text-center">
+                <img src="{{photos.thumbnailUrl}}" alt={{photos.title}}>
+                <div class="caption">
+                    <h3>{{photos.title}}</h3>
+                    <p class="btn-danger">ID : {{photos.id}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
