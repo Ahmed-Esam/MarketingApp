@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class NavbarComponent implements OnInit {
 
   isUser:boolean = false;
-  constructor(private as:AuthService) { }
+  constructor(private as:AuthService , private router:Router) { }
 
   getApiServce(){
     this.as.user.subscribe(user => {
@@ -19,6 +20,7 @@ export class NavbarComponent implements OnInit {
   }
   logout() {
     this.as.logout().then(() => console.log('out'))
+    this.router.navigate(['/']);
   }
 
   ngOnInit(): void {
