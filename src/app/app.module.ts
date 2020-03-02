@@ -18,8 +18,8 @@ import { HomeComponent } from './Home/home/home.component';
 const appRoutes: Routes = [
   
   { path: 'Signup', component: SignupComponent },
-  { path: 'Login',  component: LoginComponent },
-  { path: '',  component: HomeComponent },
+  { path: '',  component: LoginComponent },
+  { path: 'Home',  component: HomeComponent },
 ];
 
 @NgModule({
