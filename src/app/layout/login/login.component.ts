@@ -13,12 +13,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   login(form) {
     let data = form.value
     this.as.login(data.email,data.password)
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
-    this.router.navigate(['/Home']);
+    .then(res => this.router.navigate(['/Home']))
+    .catch(err => alert(err.message))
+    
+    
   }
 }
